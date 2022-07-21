@@ -60,11 +60,7 @@ module modulo_OA1D
             ! alpha = (k*m)**0.5/hbar
             !
             implicit none
-            ! COMMON hbar,m
-            ! real*8 :: hbar,m
             real*8 :: Nv
-            ! real*8 :: k = 1.0d0
-            ! real*8 :: pi
             integer, intent(in) :: n
             real*8, intent(in) :: alpha, x
             real*8 :: res_phi
