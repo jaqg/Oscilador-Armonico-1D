@@ -12,10 +12,7 @@ antes de la declaración de variables del programa.
 
 En el módulo, defino una función para el cálculo de las energías propias del
 oscilador armónico unidimensional, dadas por
-$$
-    E_n = \left( n + \frac{1}{2} \right) \hbar \omega.
-$$
-
+![](https://latex.codecogs.com/gif.latex?E_n%20%3D%20%5Cleft%28%20n%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Cright%29%20%5Chbar%20%5Comega.)
 ```fortran
 function E_OA1D(n, hbar, k, m) result(energia)
     !
@@ -42,14 +39,9 @@ donde toma como variables de entrada:
 
 Primero, creo una función para definir los polinomios de Hermite a partir de la
 relación de recurrencia
-$$
-    H_n(x) = 2xH_{n-1}(x) - 2(n-1)H_{n-2}(x),
-$$
+![](https://latex.codecogs.com/gif.latex?H_n%28x%29%20%3D%202xH_%7Bn-1%7D%28x%29%20-%202%28n-1%29H_%7Bn-2%7D%28x%29%2C)
 teniendo en cuenta que
-$$
-H_0(x) = 1,\\
-H_1(x) = 2x.
-$$
+![](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H_0%28x%29%20%26%3D%201%2C%20%5C%5C%20H_1%28x%29%20%26%3D%202x.%20%5Cend%7Balign*%7D)
 ```fortran
 recursive function hermp(n, x) result(res_hp)
     !
@@ -80,19 +72,13 @@ end function hermp
 ```
 
 Defino las funciones propias según
-$$
-    \psi_v(x) = N_v e^{-\alpha x^2/2} H_n(\sqrt{\alpha}x),
-$$
+![](https://latex.codecogs.com/gif.latex?%5Cpsi_v%28x%29%20%3D%20N_v%20e%5E%7B-%5Calpha%20x%5E2/2%7D%20H_n%28%5Csqrt%7B%5Calpha%7Dx%29%2C)
 donde $H_n$ representa el polinomio de Hermite de grado $n$, $N_v$ es una constante de normalización dada por
-$$
-    N_v = \left(\frac{\alpha}{\pi}\right)^{1/4} \frac{1}{\sqrt{2^n n!}},
-$$
+![](https://latex.codecogs.com/gif.latex?N_v%20%3D%20%5Cleft%28%5Cfrac%7B%5Calpha%7D%7B%5Cpi%7D%5Cright%29%5E%7B1/4%7D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5En%20n%21%7D%7D%2C)
 y $\alpha$ una constante que tomo como un parámetro de entrada, para poder usarlo como
 parámetro de optimización. Para el oscilador armónico unidimensional, se
 demuestra que
-$$
-    \alpha = \frac{(k m)^{1/2}}{\hbar}.
-$$
+![](https://latex.codecogs.com/gif.latex?%5Calpha%20%3D%20%5Cfrac%7B%28k%20m%29%5E%7B1/2%7D%7D%7B%5Chbar%7D.)
 Así, defino las funciones propias como
 ```fortran
 function phi(n,alpha,x) result(res_phi)
