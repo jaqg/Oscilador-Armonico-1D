@@ -139,4 +139,4 @@ que pueden ser cambiados.
 
 Represento los resultados con la libreria matplotlib de python en la carpeta
 [grafica](https://github.com/jaqg/Oscilador-Armonico-1D/tree/main/example/grafica).
-![Funciones y densidades](./example/grafica/funciones_densidades_subpllot.png)
+![Funciones y densidades](https://github.com/jaqg/Oscilador-Armonico-1D/blob/main/example/grafica/funciones_densidades_subplot.png)
