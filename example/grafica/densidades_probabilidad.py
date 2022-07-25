@@ -16,6 +16,7 @@ plt.style.use('mine')
 # --------------
 
 nombre_grafica = os.path.basename(__file__).replace(".py", ".pdf")
+nombre_grafica_png = os.path.basename(__file__).replace(".py", ".png")
 
 fichero_entrada                 = './../data/in-OA1D_example.dat'
 fichero_funciones_propias       = './../data/out-funciones_propias.dat'
@@ -81,3 +82,4 @@ ax.set_xlim(xmin,xmax)
 ax.set_ylim(ymin,ymax)
 
 plt.savefig(nombre_grafica, transparent='True', bbox_inches='tight')
+plt.savefig(nombre_grafica_png, transparent='True', bbox_inches='tight')
