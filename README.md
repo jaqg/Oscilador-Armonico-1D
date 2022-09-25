@@ -149,5 +149,5 @@ Hace uso de los módulos y subrutinas de la carpeta [subrutinas](https://github.
 que pueden ser cambiados.
 
 Represento los resultados con la libreria matplotlib de python en la carpeta
-[grafica](https://github.com/jaqg/Oscilador-Armonico-1D/tree/main/example/grafica).
+[gráfica](https://github.com/jaqg/Oscilador-Armonico-1D/tree/main/example/grafica).
 ![Funciones y densidades](https://github.com/jaqg/Oscilador-Armonico-1D/blob/main/example/grafica/funciones_densidades_subplot.png)
