@@ -55,7 +55,7 @@ H_0(x) = 1,\\
 H_1(x) = 2x.
 $$
 
-```Fortran
+```F
 recursive function hermp(n, x) result(res_hp)
     !
     ! Funcion para el computo de los polinomios de Hermite haciendo
