@@ -12,6 +12,7 @@ antes de la declaración de variables del programa.
 
 En el módulo, defino una función para el cálculo de las energías propias del
 oscilador armónico unidimensional, dadas por
+
 $$
     E_n = \left( n + \frac{1}{2} \right) \hbar \omega.
 $$
@@ -42,14 +43,18 @@ donde toma como variables de entrada:
 
 Primero, creo una función para definir los polinomios de Hermite a partir de la
 relación de recurrencia
+
 $$
     H_n(x) = 2xH_{n-1}(x) - 2(n-1)H_{n-2}(x),
 $$
+
 teniendo en cuenta que
+
 $$
 H_0(x) = 1,\\
 H_1(x) = 2x.
 $$
+
 ```fortran
 recursive function hermp(n, x) result(res_hp)
     !
@@ -80,19 +85,25 @@ end function hermp
 ```
 
 Defino las funciones propias según
+
 $$
     \psi_v(x) = N_v e^{-\alpha x^2/2} H_n(\sqrt{\alpha}x),
 $$
+
 donde $H_n$ representa el polinomio de Hermite de grado $n$, $N_v$ es una constante de normalización dada por
+
 $$
     N_v = \left(\frac{\alpha}{\pi}\right)^{1/4} \frac{1}{\sqrt{2^n n!}},
 $$
+
 y $\alpha$ una constante que tomo como un parámetro de entrada, para poder usarlo como
 parámetro de optimización. Para el oscilador armónico unidimensional, se
 demuestra que
+
 $$
     \alpha = \frac{(k m)^{1/2}}{\hbar}.
 $$
+
 Así, defino las funciones propias como
 ```fortran
 function phi(n,alpha,x) result(res_phi)
